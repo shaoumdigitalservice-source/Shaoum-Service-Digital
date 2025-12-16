@@ -1,0 +1,112 @@
+/* ========================================
+   CSS RESET - Shaoum Service Digital
+   Normalisation des styles entre navigateurs
+======================================== */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Marges et padding par défaut */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML et Body */
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Médias */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Formulaires */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Typographie */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* Listes */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Liens */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Boutons */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Suppression des styles par défaut des éléments de formulaire */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+textarea,
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Focus visible pour l'accessibilité */
+:focus-visible {
+    outline: 2px solid #1E3A8A;
+    outline-offset: 2px;
+}
+
+/* Suppression du focus par défaut */
+:focus:not(:focus-visible) {
+    outline: none;
+}

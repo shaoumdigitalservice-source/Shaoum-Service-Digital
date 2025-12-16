@@ -1,0 +1,685 @@
+/* ========================================
+   RESPONSIVE CSS - Shaoum Service Digital
+   Media queries pour mobile, tablette et desktop
+======================================== */
+
+/* ========================================
+   TABLETTE (max-width: 1024px)
+======================================== */
+@media screen and (max-width: 1024px) {
+    /* Typography */
+    .section__title {
+        font-size: 2rem;
+    }
+
+    .hero__title,
+    .page-header__title {
+        font-size: 2.5rem;
+    }
+
+    /* Hero */
+    .hero__container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .hero__image {
+        order: -1;
+    }
+
+    .hero__image-wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* About */
+    .about-intro__content {
+        grid-template-columns: 1fr;
+    }
+
+    .values__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vm-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Services */
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Pricing */
+    .pricing__grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /* Why Us */
+    .why-us__grid,
+    .why-us__grid-preview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact */
+    .contact__content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CTA Buttons */
+    .cta__buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta__buttons .btn {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* ========================================
+   MOBILE (max-width: 768px)
+======================================== */
+@media screen and (max-width: 768px) {
+    /* Variables override */
+    :root {
+        --spacing-xl: 2rem;
+        --spacing-2xl: 3rem;
+        --spacing-3xl: 4rem;
+        --header-height: 70px;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    /* Section */
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    /* Typography */
+    .section__title {
+        font-size: 1.75rem;
+    }
+
+    .section__subtitle {
+        font-size: 1rem;
+    }
+
+    /* Header / Navigation */
+    .nav {
+        height: var(--header-height);
+    }
+
+    .nav__logo-text {
+        font-size: 1.25rem;
+    }
+
+    .nav__logo-highlight {
+        font-size: 0.65rem;
+    }
+
+    .nav__toggle {
+        display: flex;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: var(--header-height);
+        right: -100%;
+        width: 100%;
+        max-width: 300px;
+        height: calc(100vh - var(--header-height));
+        background: white;
+        box-shadow: var(--shadow-xl);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-lg);
+        transition: right var(--transition-base);
+        overflow-y: auto;
+    }
+
+    .nav__menu.active {
+        right: 0;
+    }
+
+    .nav__item {
+        width: 100%;
+    }
+
+    .nav__link {
+        display: block;
+        width: 100%;
+        padding: var(--spacing-sm) 0;
+        font-size: 1.125rem;
+    }
+
+    .btn--nav {
+        width: 100%;
+        margin-top: var(--spacing-md);
+    }
+
+    /* Page Header */
+    .page-header {
+        padding: calc(var(--header-height) + var(--spacing-xl)) 0 var(--spacing-xl);
+    }
+
+    .page-header__title {
+        font-size: 2rem;
+    }
+
+    .page-header__description {
+        font-size: 1rem;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + var(--spacing-xl));
+        padding-bottom: var(--spacing-2xl);
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__description {
+        font-size: 1rem;
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .hero__buttons .btn {
+        width: 100%;
+    }
+
+    .hero__stats {
+        flex-wrap: wrap;
+        gap: var(--spacing-lg);
+    }
+
+    .stat__number {
+        font-size: 1.5rem;
+    }
+
+    /* About */
+    .about-intro__paragraph {
+        font-size: 1rem;
+    }
+
+    .about-intro__svg {
+        max-width: 300px;
+    }
+
+    .values__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value__item {
+        padding: var(--spacing-md);
+    }
+
+    /* Services */
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service__card {
+        padding: var(--spacing-lg);
+    }
+
+    .service__icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .service__title {
+        font-size: 1.25rem;
+    }
+
+    .service-detail__icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .service-detail__title {
+        font-size: 2rem;
+    }
+
+    .service-detail__intro {
+        font-size: 1rem;
+    }
+
+    .feature-item {
+        flex-direction: column;
+    }
+
+    /* Pricing */
+    .pricing__card {
+        padding: var(--spacing-lg);
+    }
+
+    .pricing__name {
+        font-size: 1.5rem;
+    }
+
+    .pricing__badge {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+    }
+
+    /* Comparison Table */
+    .comparison__table {
+        font-size: 0.875rem;
+    }
+
+    .comparison__table th,
+    .comparison__table td {
+        padding: var(--spacing-sm);
+    }
+
+    /* Why Us */
+    .why-us__grid,
+    .why-us__grid-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .why-us__item {
+        padding: var(--spacing-lg);
+    }
+
+    .why-us__number {
+        font-size: 2.5rem;
+    }
+
+    .why-us__title {
+        font-size: 1.25rem;
+    }
+
+    /* Contact */
+    .contact__form-wrapper {
+        padding: var(--spacing-lg);
+    }
+
+    .contact__form-title {
+        font-size: 1.5rem;
+    }
+
+    .form__group {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .contact__info-title {
+        font-size: 1.25rem;
+    }
+
+    .social__links {
+        justify-content: center;
+    }
+
+    /* Other Contact */
+    .other-contact__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* CTA */
+    .cta__title {
+        font-size: 2rem;
+    }
+
+    .cta__description {
+        font-size: 1.125rem;
+    }
+
+    .cta__buttons {
+        flex-direction: column;
+    }
+
+    .cta__buttons .btn {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: var(--spacing-xl) 0 var(--spacing-md);
+    }
+
+    .footer__content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+
+    /* Scroll to top */
+    .scroll-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Notification */
+    .notification {
+        width: 95%;
+    }
+}
+
+/* ========================================
+   PETIT MOBILE (max-width: 480px)
+======================================== */
+@media screen and (max-width: 480px) {
+    /* Typography */
+    .section__title {
+        font-size: 1.5rem;
+    }
+
+    .hero__title,
+    .page-header__title {
+        font-size: 1.75rem;
+    }
+
+    .hero__description,
+    .page-header__description {
+        font-size: 0.95rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .btn--large {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Hero */
+    .hero__stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    /* Services */
+    .service__icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .service-detail__icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Contact */
+    .form__input,
+    .form__textarea,
+    .form__select {
+        font-size: 0.95rem;
+    }
+
+    .social__link {
+        width: 44px;
+        height: 44px;
+    }
+
+    .contact__info-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer__logo-text {
+        font-size: 1.25rem;
+    }
+
+    .footer__social-link {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* CTA */
+    .cta__title {
+        font-size: 1.75rem;
+    }
+
+    .cta__description {
+        font-size: 1rem;
+    }
+
+    /* Vision Mission Cards */
+    .vm-card {
+        padding: var(--spacing-lg);
+    }
+
+    .vm-card__icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .vm-card__title {
+        font-size: 1.5rem;
+    }
+
+    .vm-card__description {
+        font-size: 1rem;
+    }
+
+    /* Pricing */
+    .pricing__description,
+    .pricing__target p,
+    .pricing__benefits li {
+        font-size: 0.9rem;
+    }
+
+    /* FAQ */
+    .faq__question {
+        font-size: 1rem;
+    }
+
+    .faq__answer {
+        font-size: 0.95rem;
+    }
+}
+
+/* ========================================
+   LARGE DESKTOP (min-width: 1440px)
+======================================== */
+@media screen and (min-width: 1440px) {
+    :root {
+        --container-max-width: 1320px;
+    }
+
+    .section__title {
+        font-size: 3rem;
+    }
+
+    .hero__title,
+    .page-header__title {
+        font-size: 4rem;
+    }
+
+    .hero__description,
+    .page-header__description {
+        font-size: 1.375rem;
+    }
+
+    .service-detail__title {
+        font-size: 3rem;
+    }
+
+    .cta__title {
+        font-size: 3rem;
+    }
+}
+
+/* ========================================
+   ANIMATIONS RESPONSIVE
+======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================================
+   ORIENTATION LANDSCAPE (mobiles)
+======================================== */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-xl) 0;
+    }
+
+    .nav__menu {
+        height: 100vh;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+======================================== */
+@media print {
+    .header,
+    .nav__toggle,
+    .hero__buttons,
+    .btn,
+    .scroll-top,
+    .contact__form-wrapper,
+    .footer__social,
+    .notification {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    .hero,
+    .page-header {
+        background: white !important;
+        color: black !important;
+    }
+
+    .section--primary {
+        background: white !important;
+        color: black !important;
+    }
+
+    .section--primary .section__title,
+    .section--primary .section__subtitle {
+        color: black !important;
+    }
+}
+
+/* ========================================
+   DARK MODE (optionnel - à activer si besoin)
+======================================== */
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #F9FAFB;
+        --color-text-light: #D1D5DB;
+        --color-bg: #1F2937;
+        --color-bg-gray: #111827;
+        --color-border: #374151;
+    }
+
+    body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+    }
+
+    .header {
+        background-color: var(--color-bg);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .service__card,
+    .pricing__card,
+    .why-us__item,
+    .value__item,
+    .contact__form-wrapper,
+    .contact__info-item,
+    .footer {
+        background-color: var(--color-bg-gray);
+    }
+} */
+
+/* ========================================
+   ACCESSIBILITÉ
+======================================== */
+/* Focus visible amélioré pour le clavier */
+@media (prefers-reduced-motion: no-preference) {
+    :focus-visible {
+        outline: 3px solid var(--color-secondary);
+        outline-offset: 3px;
+    }
+}
+
+/* Contraste élevé */
+@media (prefers-contrast: high) {
+    .btn--outline {
+        border-width: 3px;
+    }
+
+    .section__line {
+        height: 5px;
+    }
+}
+
+/* ========================================
+   TOUCH DEVICES
+======================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Augmenter les zones de clic sur mobile */
+    .btn,
+    .nav__link,
+    .social__link,
+    .footer__link {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* Supprimer les effets hover sur tactile */
+    .service__card:hover,
+    .pricing__card:hover,
+    .why-us__item:hover {
+        transform: none;
+    }
+}
